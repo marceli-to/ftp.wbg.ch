@@ -1,0 +1,32 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-OAwvB5tn.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/fonts/din-medi-webfont.woff": {
+    "file": "assets/din-medi-webfont-CiCU7Q-a.woff",
+    "src": "resources/fonts/din-medi-webfont.woff"
+  },
+  "resources/fonts/din-regular-webfont.woff": {
+    "file": "assets/din-regular-webfont-BDg16df1.woff",
+    "src": "resources/fonts/din-regular-webfont.woff"
+  },
+  "resources/images/bg.jpg": {
+    "file": "assets/bg-BsvQ49W9.jpg",
+    "src": "resources/images/bg.jpg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-KhzKy6vE.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-DLAgE5CR.css"
+    ]
+  }
+}
