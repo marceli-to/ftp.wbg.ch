@@ -6,23 +6,36 @@
 @source '../**/*.js';
 
 @font-face {
-    font-family: 'DINRegular';
-    src: url('../fonts/din-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'DINRegular';
+  src: url('../fonts/din-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'DINMedium';
-    src: url('../fonts/din-medi-webfont.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'DINLight';
+  src: url('../fonts/din-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINMedium';
+  src: url('../fonts/din-medi-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @theme {
     --font-sans: 'DINRegular', ui-sans-serif, system-ui, sans-serif;
     --font-medium: 'DINMedium', ui-sans-serif, system-ui, sans-serif;
+    --font-light: 'DINLight', ui-sans-serif, system-ui, sans-serif;
+    
+    --text-sm: 0.875rem;
+    --text-md: 1.5rem;
+
     --color-crimson: #dc0000;
+    
     --background-image-wbg: url('../images/bg.jpg');
 
     /* Spacing scale: 1px to 500px as rem (1rem = 16px) */
@@ -526,10 +539,6 @@
     --spacing-498: 31.125rem;
     --spacing-499: 31.1875rem;
     --spacing-500: 31.25rem;
-}
-
-html {
-    font-size: 14px;
 }
 
 /* FilePond custom styles */

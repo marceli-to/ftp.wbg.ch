@@ -9,7 +9,7 @@
       Keine Dateien vorhanden
     </div>
 
-    <div v-else class="space-y-8">
+    <div v-else >
       <div
         v-for="file in files"
         :key="file.id"
@@ -30,7 +30,7 @@
           <!-- Copy Link -->
           <button
             @click="copyLink(file.download_url)"
-            class="p-4 text-stone-600 hover:text-crimson transition-colors"
+            class="p-4 cursor-pointer text-stone-600 hover:text-crimson transition-colors"
             title="Link kopieren">
             <PhCopy :size="20" />
           </button>
@@ -38,7 +38,7 @@
           <!-- Delete -->
           <button
             @click="deleteFile(file)"
-            class="p-4 text-stone-600 hover:text-crimson transition-colors"
+            class="p-4 cursor-pointer text-stone-600 hover:text-crimson transition-colors"
             title="Löschen">
             <PhTrash :size="20" />
           </button>

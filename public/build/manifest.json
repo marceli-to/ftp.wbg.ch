@@ -1,12 +1,16 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-OAwvB5tn.css",
+    "file": "assets/app-BbgDYiZZ.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
     "names": [
       "app.css"
     ]
+  },
+  "resources/fonts/din-light-webfont.woff": {
+    "file": "assets/din-light-webfont-CLLvE1rH.woff",
+    "src": "resources/fonts/din-light-webfont.woff"
   },
   "resources/fonts/din-medi-webfont.woff": {
     "file": "assets/din-medi-webfont-CiCU7Q-a.woff",
@@ -21,7 +25,7 @@
     "src": "resources/images/bg.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-KhzKy6vE.js",
+    "file": "assets/app-C-IBQk17.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
