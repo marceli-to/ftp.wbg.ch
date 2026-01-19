@@ -12,7 +12,6 @@ class File extends Model
     protected $fillable = [
         'user_id',
         'token',
-        'display_name',
         'original_name',
         'storage_path',
         'mime_type',

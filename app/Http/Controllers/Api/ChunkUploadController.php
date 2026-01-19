@@ -150,7 +150,6 @@ class ChunkUploadController extends Controller
         $file = File::create([
             'user_id' => $metadata['user_id'],
             'original_name' => $metadata['original_name'],
-            'display_name' => pathinfo($metadata['original_name'], PATHINFO_FILENAME),
             'storage_path' => $finalPath,
             'size' => $fileSize,
             'mime_type' => $mimeType,

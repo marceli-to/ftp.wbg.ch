@@ -27,7 +27,7 @@ class CleanupExpiredFiles extends Command
             Storage::disk('local')->delete($file->storage_path);
             $file->delete();
             $count++;
-            $this->line("Deleted: {$file->display_name} ({$file->original_name})");
+            $this->line("Deleted: {$file->original_name}");
         }
 
         $this->info("Successfully deleted {$count} expired file(s).");

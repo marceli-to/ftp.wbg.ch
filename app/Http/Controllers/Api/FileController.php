@@ -16,7 +16,6 @@ class FileController extends Controller
         return response()->json($files->map(function ($file) {
             return [
                 'id' => $file->id,
-                'display_name' => $file->display_name,
                 'original_name' => $file->original_name,
                 'formatted_size' => $file->formatted_size,
                 'download_url' => $file->download_url,
@@ -36,7 +35,6 @@ class FileController extends Controller
         $file = File::create([
             'user_id' => $request->user()->id,
             'original_name' => $uploadedFile->getClientOriginalName(),
-            'display_name' => pathinfo($uploadedFile->getClientOriginalName(), PATHINFO_FILENAME),
             'storage_path' => $path,
             'size' => $uploadedFile->getSize(),
             'mime_type' => $uploadedFile->getMimeType(),
@@ -45,7 +43,6 @@ class FileController extends Controller
 
         return response()->json([
             'id' => $file->id,
-            'display_name' => $file->display_name,
             'original_name' => $file->original_name,
             'formatted_size' => $file->formatted_size,
             'download_url' => $file->download_url,

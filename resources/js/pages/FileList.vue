@@ -17,7 +17,7 @@
 
         <div class="flex-1 min-w-0">
           <div class="font-medium truncate">
-            {{ file.display_name }}
+            {{ file.original_name }}
           </div>
           <div class="flex gap-8 mt-4">
             <span class="px-8 py-2 bg-stone-100 text-stone-600 text-sm">

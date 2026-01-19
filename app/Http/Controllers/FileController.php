@@ -21,22 +21,17 @@ class FileController extends Controller
     {
         $request->validate([
             'file' => 'required|file',
-            'display_name' => 'nullable|string|max:255',
             'expiration_type' => 'required|in:1_week,1_month,1_year,never',
         ]);
 
         $uploadedFile = $request->file('file');
-        $originalName = $uploadedFile->getClientOriginalName();
-        $displayName = $request->input('display_name') ?: pathinfo($originalName, PATHINFO_FILENAME);
-
         $token = File::generateToken();
         $storagePath = $uploadedFile->store('files', 'local');
 
         $file = File::create([
             'user_id' => $request->user()->id,
             'token' => $token,
-            'display_name' => $displayName,
-            'original_name' => $originalName,
+            'original_name' => $uploadedFile->getClientOriginalName(),
             'storage_path' => $storagePath,
             'mime_type' => $uploadedFile->getMimeType(),
             'size' => $uploadedFile->getSize(),
@@ -50,11 +45,11 @@ class FileController extends Controller
     public function update(Request $request, File $file)
     {
         $request->validate([
-            'display_name' => 'required|string|max:255',
+            'original_name' => 'required|string|max:255',
         ]);
 
         $file->update([
-            'display_name' => $request->input('display_name'),
+            'original_name' => $request->input('original_name'),
         ]);
 
         return redirect('/')->with('success', 'Datei umbenannt');

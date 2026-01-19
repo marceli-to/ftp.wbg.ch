@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Download - {{ $file->display_name }} – wbg.ch</title>
+<title>Download - {{ $file->original_name }} – wbg.ch</title>
 @vite(['resources/css/app.css'])
 </head>
 <body class="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center bg-wbg text-sm">
@@ -11,7 +11,7 @@
         <h1>Download</h1>
         <a href="{{ route('download.file', $file->token) }}"
            class="hover:opacity-70 transition-opacity text-md font-light">
-            {{ $file->display_name }}
+            {{ $file->original_name }}
         </a>
         <footer class="text-crimson uppercase">
             <p>WBG AG – Visuelle Kommunikation</p>
