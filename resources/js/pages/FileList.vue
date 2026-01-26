@@ -16,9 +16,9 @@
         class="flex items-center justify-between gap-16 py-12 border-b border-stone-200 first:border-t">
 
         <div class="flex-1 min-w-0">
-          <div class="font-medium truncate">
+          <a :href="file.download_url" class="font-medium truncate hover:text-crimson transition-colors">
             {{ file.original_name }}
-          </div>
+          </a>
           <div class="flex gap-8 mt-4">
             <span class="px-8 py-2 bg-stone-100 text-stone-600 text-sm">
               {{ file.formatted_size }}
