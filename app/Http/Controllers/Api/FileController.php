@@ -19,6 +19,7 @@ class FileController extends Controller
                 'original_name' => $file->original_name,
                 'formatted_size' => $file->formatted_size,
                 'download_url' => $file->download_url,
+                'direct_url' => $file->direct_url,
             ];
         }));
     }

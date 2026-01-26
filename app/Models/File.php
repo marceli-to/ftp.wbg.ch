@@ -25,7 +25,7 @@ class File extends Model
         'size' => 'integer',
     ];
 
-    protected $appends = ['download_url', 'formatted_size'];
+    protected $appends = ['download_url', 'direct_url', 'formatted_size'];
 
     public function user(): BelongsTo
     {
@@ -64,6 +64,11 @@ class File extends Model
     public function getDownloadUrlAttribute(): string
     {
         return url("/d/{$this->token}");
+    }
+
+    public function getDirectUrlAttribute(): string
+    {
+        return url("/d/{$this->token}/file");
     }
 
     public function getFormattedSizeAttribute(): string
