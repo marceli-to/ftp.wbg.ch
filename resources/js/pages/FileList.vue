@@ -16,7 +16,7 @@
         class="flex items-center justify-between gap-16 py-12 border-b border-stone-200 first:border-t">
 
         <div class="flex-1 min-w-0">
-          <a :href="file.download_url" class="font-medium truncate hover:text-crimson transition-colors">
+          <a :href="file.download_url" target="_blank" class="font-medium truncate hover:text-crimson transition-colors">
             {{ file.original_name }}
           </a>
           <div class="flex gap-8 mt-4">
